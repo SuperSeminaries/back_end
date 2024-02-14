@@ -7,15 +7,15 @@ import app from "./app.js";
 
 dotenv.config();
 
-// connectDB().then(()=> {
-//     app.listen(process.env.PORT || 5000, ()=> {
-//         console.log(`server listen on port ${process.env.PORT}`);
-//     })
-// }).catch((error)=> {
-//     console.log("mongoDB connection faild !!!", error);
-// })
+connectDB().then(()=> {
+    app.listen(process.env.PORT || 5000, ()=> {
+        console.log(`server listen on port ${process.env.PORT}`);
+    })
+}).catch((error)=> {
+    console.log("mongoDB connection faild !!!", error);
+})
 
-
+/*
 // Use an async function to handle asynchronous code
 const startServer = async () => {
     try {
@@ -35,4 +35,4 @@ const startServer = async () => {
   };
   
   // Call the async function to start the server
-  startServer();
+  startServer(); */
