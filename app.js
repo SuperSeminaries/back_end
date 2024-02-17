@@ -11,7 +11,7 @@ app.use(cookieParser())
 
 
 import userRouter from "./src/routes/user.routes.js";
-import bodyParser from "body-parser";
+
 
 app.use('/users', userRouter)
 
